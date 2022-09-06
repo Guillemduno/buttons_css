@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .square{
+            margin: 1em;
+            width: 70px;
+            height: 70px;
+            background-color: tan;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 2px 2px 4px rgb(170, 142, 104) inset, -2px -2px 4px rgb(170, 142, 104) inset;
+            border-radius: 4px;
+        }
+
+        .circle{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            /* width: 150px;
+            height: 150px; */
+            border-radius: 50%;
+            color: red;
+            background-image: radial-gradient(circle, rgb(187, 233, 187), rgb(70, 175, 70), rgb(1, 61, 1));
+            /* background-image: radial-gradient(circle, rgba(255, 255, 255, 0), rgba(124, 126, 124, 0.432), rgba(37, 37, 37, 0.863)); */
+            border: 4px solid  rgba(1, 37, 1, 0.04);
+        }
+
+    </style>
+
+    <div class="square">
+        <div class="circle"></div>
+    </div>
+
+    <script>
+        function createButton(color = "", size = ""){
+            const square = document.createElement("div");
+            const circle = document.createElement("div");
+            
+            square.classList.add("square");
+            circle.classList.add("circle");
+            document.body.appendChild(square);
+            square.appendChild(circle);  
+        }
+
+        createButton();
+    </script>
+</body>
+</html>
